@@ -35,7 +35,7 @@ public class Program
         //Dumping automatically with ASSETSTUDIO
         string thisPath = Path.GetFullPath(dir);
         Console.WriteLine("Dumping " + thisPath + " Folder");
-        string cmd = $"\"{GAME_BLOCKS_PATH}\\{dir}\" \"{thisPath}\" --game GI --ai_file \""+ AI_FILE+"\" --key {XOR_KEY}  --group_assets ByType";
+        string cmd = $"\"{GAME_BLOCKS_PATH}\\{dir}\" \"{thisPath}\" --game GI --ai_file \"{AI_FILE}\" --key {XOR_KEY}  --group_assets ByType";
         Process process = Process.Start(ASSET_STUDIO_CLI_PATH,cmd);
         while (!process.HasExited)
         {
