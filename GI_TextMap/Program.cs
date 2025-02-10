@@ -59,6 +59,7 @@ public class Program
         }
         Console.WriteLine("Starting parse!");
         string outputFilePath = Path.Combine(outputDirectory+$"/{VER}", name+".json");
+        Directory.CreateDirectory(outputDirectory + $"/{VER}");
         foreach (var file in Directory.GetFiles(dir))
         {
             FileParser parser = new FileParser();
